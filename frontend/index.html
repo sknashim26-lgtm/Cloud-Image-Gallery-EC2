@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f3">
+  <meta name="description" content="A simple, private cloud image gallery.">
+  <title>Cloud Gallery — your images, beautifully gathered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Cloud Gallery home">
+      <span class="brand-mark" aria-hidden="true">◈</span>
+      <span>cloud<span class="brand-light">gallery</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="nav-link active" href="#gallery">My gallery</a>
+      <a class="nav-link" href="#upload">Add photos</a>
+    </nav>
+    <a class="nav-upload" href="#upload"><span aria-hidden="true">＋</span> Upload images</a>
+  </header>
+
+  <main id="home" class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow"><span class="status-dot"></span> YOUR PRIVATE SPACE</p>
+        <h1 id="page-title">A little room for<br><span>every moment.</span></h1>
+        <p class="intro-copy">Keep your favorite memories close, beautifully organized in one place.</p>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <div class="art-sun"></div><div class="art-hill hill-back"></div><div class="art-hill hill-front"></div>
+        <div class="art-caption">moments, collected</div>
+      </div>
+    </section>
+
+    <section id="upload" class="upload-panel" aria-labelledby="upload-title">
+      <div class="upload-copy">
+        <div class="upload-icon" aria-hidden="true">↥</div>
+        <div>
+          <h2 id="upload-title">Add to your collection</h2>
+          <p>Choose a photo from your device. JPG, PNG or WEBP · up to 5 MB</p>
+        </div>
+      </div>
+      <label class="button button-dark file-button" for="image-input">Choose images <span aria-hidden="true">↗</span></label>
+      <input id="image-input" class="visually-hidden" type="file" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" multiple>
+      <div id="upload-status" class="upload-status" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="gallery" class="gallery-section" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE GOOD STUFF</p>
+          <h2 id="gallery-title">Your gallery <span id="image-count" class="count-badge">—</span></h2>
+        </div>
+        <button id="refresh-button" class="refresh-button" type="button" aria-label="Refresh gallery"><span aria-hidden="true">↻</span> Refresh</button>
+      </div>
+      <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
+      <div id="gallery-empty" class="empty-state" hidden>
+        <span class="empty-icon" aria-hidden="true">▧</span>
+        <h3>Your gallery is ready</h3>
+        <p>Upload a few photos and they’ll show up here.</p>
+        <a class="button button-outline" href="#upload">Add your first photo <span aria-hidden="true">↗</span></a>
+      </div>
+      <p id="gallery-error" class="error-banner" role="alert" hidden></p>
+    </section>
+    <footer class="site-footer"><span>Made for the moments worth keeping.</span><span class="footer-lock">◈ Private by design</span></footer>
+  </main>
+</body>
+</html>

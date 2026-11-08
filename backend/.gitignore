@@ -1,0 +1,19 @@
+# Environment variables and secrets
+.env
+.env.*
+
+# Allow example environment file
+!.env.example
+
+# Node.js dependencies
+node_modules/
+
+# Log files
+*.log
+
+# Private SSH keys
+*.pem
+
+# Operating system files
+.DS_Store
+Thumbs.db
